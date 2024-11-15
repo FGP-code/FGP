@@ -41,7 +41,7 @@ data
         └── SegmentationObject
 ```
 
-We organized the VOC2012 dataset by individual categories. Each class's list of labels and image names are stored separately for training and testing of individual types in `FWM_datalist_20Class`.  
+We organized the VOC2012 dataset by individual categories. Each class's list of labels and image names are stored separately for training and testing of individual types in `FGP_datalist_20Class`.  
 
 Put the contents of  `train_type_list.txt ` and  `val_type_list.txt ` for each category into  `train.txt ` and  `val.txt ` under ` ./data/VOCdevkit/VOC2012/JPEGImages/Segmentation ` when training the types. Image labels into  `./data/VOCdevkit/VOC2012/SegmentationClass `.
 
@@ -75,11 +75,13 @@ scikit-learn
 grad-cam
 ```
 
-### Train
+### Process
 
-Step1.  Run train.py
+Step1.  Run train.py 
+
 Step2.  Run prune_test.py
+
 Step3.  Run  predict.py
 
-### Results
+
 

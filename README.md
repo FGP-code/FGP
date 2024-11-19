@@ -13,6 +13,17 @@ Paper: [https://github.com/FGP-code/FGP](https://github.com/FGP-code/FGP)
 ## Abstract
 > To reduce computational overhead while maintaining model performance, model pruning techniques have been proposed. Among these, structured pruning, which removes entire convolutional channels or layers, significantly improves computational efficiency and is compatible with hardware acceleration. However, existing pruning methods often struggle to accurately identify important channels, leading to the retention of redundant ones that negatively impact inference efficiency. To address this issue, this paper introduces a novel pruning method, Feature-Gradient Pruning (FGP). The proposed method combines both feature-based and gradient-based information to more effectively assess the importance of channels across all target classes, enabling a more precise identification of channels critical to model performance. Experimental results demonstrate that the proposed method improves model compactness and practical applicability while maintaining stable performance. Experiments across multiple tasks and datasets show that FGP significantly reduces computational costs and minimizes accuracy loss compared to existing methods, highlighting its effectiveness in optimizing pruning outcomes. 
 
+## Motivation
+
+<div align="center">
+<br>
+	<img width="40%" alt="Fig3_Mov" src="./Figs/Fig1_Mov3.png">
+</div>
+
+
+The visualization results show one channel from each of the four convolutional layers, along with heatmaps for three classes. FGP retains Channel-2 and 4, and pruned model keeps only those channels with strong support values across all classes.
+
+
 ## Preparations
 
 #### 1. Download VOC 2012 dataset
